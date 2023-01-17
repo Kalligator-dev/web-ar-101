@@ -1,0 +1,23 @@
+{
+  "name": "ar-101",
+  "version": "1.0.0",
+  "description": "fun little website for learning purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wds --node-resolve --open --watch"
+  },
+  "keywords": [
+    "ar",
+    "mind-ar"
+  ],
+  "author": "ak",
+  "license": "ISC",
+  "dependencies": {
+    "bezier-easing": "^2.1.0",
+    "mind-ar": "^1.2.0"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.35"
+  }
+}
