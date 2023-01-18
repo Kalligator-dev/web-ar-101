@@ -1,9 +1,97 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 body {
+  display: flex;
+  flex-direction: column;
+}
+* {
   margin: 0;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+header h1 {
+  margin-left: 0.5rem;
+  color: rgb(42, 78, 78);
+}
+#links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+  background: rgb(42, 78, 78);
+  padding: 1rem;
+  transition: all 0.5s;
+}
+a:hover {
+  background: rgb(127, 185, 185);
+  color: darkslategray;
+}
+a.active {
+  color: goldenrod;
+  background: rgb(7, 67, 67);
+  pointer-events: none;
+}
+a,
+button,
+header h1 {
+  cursor: pointer;
+}
+
+#control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #container {
-  width: 100vw;
-  height: 100vh;
   position: relative;
   overflow: hidden;
+  flex-grow: 1;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  background: lightgray;
+}
+
+button {
+  border: none;
+  background: teal;
+  color: whitesmoke;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  margin: 0 0.5rem;
+  transition: all 0.5s;
+}
+button:hover {
+  background: rgb(127, 200, 200);
+  color: darkslategrey;
+}
+button.active {
+  background: green;
+  color: whitesmoke;
+  font-weight: 500;
+  pointer-events: none;
+}
+button.deact {
+  background: lightgray;
+  color: rgb(97, 97, 97);
+  pointer-events: none;
+}
+
+footer {
+  background: darkslategray;
+  color: beige;
+  padding: 0.5rem;
+  text-align: center;
 }

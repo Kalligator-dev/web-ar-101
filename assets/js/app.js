@@ -17,7 +17,7 @@ scene.add(light);
 
 const gltf = await loadGLTF("assets/3d/azeria/scene.gltf");
 gltf.scene.scale.set(0.0065, 0.0065, 0.0065);
-gltf.scene.position.set(-0.05, -0.05, 0);
+gltf.scene.position.set(-0.05, -0.04, 0);
 anchor.group.add(gltf.scene);
 
 const mixer = new THREE.AnimationMixer(gltf.scene);
@@ -37,7 +37,7 @@ let rotationAngle = 0.8;
 
 const start = async () => {
   // await mockWithVideo("assets/video/mock3.mp4");
-  await mockWithImage("assets/img/mock.jpg");
+  await mockWithImage("assets/img/azeria.jpg");
   await mindarThree.start();
   renderer.setAnimationLoop(() => {
     const delta = clock.getDelta();
@@ -62,11 +62,19 @@ const stopButton = document.querySelector("#stopButton");
 const animButton = document.querySelector("#animButton");
 
 startButton.addEventListener("click", () => {
+  startButton.className = "active";
+  stopButton.className = "";
+  animButton.className = "";
+  container.style.backgroundColor = "transparent";
   start();
 });
 stopButton.addEventListener("click", () => {
+  startButton.className = "";
+  stopButton.className = "deact";
+  animButton.className = "deact";
   mindarThree.stop();
   mindarThree.renderer.setAnimationLoop(null);
+  container.style.backgroundColor = "lightgrey";
 });
 animButton.addEventListener("click", () => {
   animations[currentAnimation].stop();

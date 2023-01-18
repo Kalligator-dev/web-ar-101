@@ -1,33 +1,29 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="./assets/js/app.js">
-      
-    </script>
-    <style>
-      body {
-        margin: 0;
-      }
-      #container {
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
-      }
-      #control {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 2;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./assets/js/app.js"></script>
   </head>
   <body>
+    <header>
+      <h1>WebAr 101</h1>
+      <div id="links">
+        <a href="index.html" class="active">Azeria</a>
+        <!-- <a href="index.html">Css</a>
+        <a href="index.html">Face</a>
+        <a href="index.html">World</a> -->
+      </div>
+    </header>
     <div id="control">
       <button id="startButton">Start</button>
-      <button id="stopButton">Stop</button>
-      <button id="animButton">Animation</button>
+      <button id="stopButton" class="deact">Stop</button>
+      <button id="animButton" class="deact">Animation</button>
     </div>
-    <div id="container"></div>
+    <div id="container">
+      <div id="video"></div>
+    </div>
+    <footer>
+      <p>©2023 kalligator-dev, made using mind-ar</p>
+    </footer>
   </body>
 </html>
