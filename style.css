@@ -61,7 +61,10 @@ header h1 {
   flex-grow: 1;
   margin: 0.5rem;
   border-radius: 0.25rem;
+}
+#container.deact {
   background: lightgray;
+  pointer-events: none;
 }
 
 button {
