@@ -1,9 +1,9 @@
 import * as THREE from "three";
 import bezier from "bezier-easing";
 import { MindARThree } from "mind-ar/dist/mindar-image-three.prod";
-import { mockWithImage } from "./camera-mock";
+import { mockWithImage } from "./libs/camera-mock";
 // import { mockWithVideo } from "./helpers";
-import { loadGLTF, loadAudio } from "./loader";
+import { loadGLTF, loadAudio } from "./libs/loader";
 
 const container = document.querySelector("#container");
 const mindarThree = new MindARThree({
