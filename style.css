@@ -51,6 +51,7 @@ header h1 {
 }
 
 #control {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,4 +98,25 @@ footer {
   color: beige;
   padding: 0.5rem;
   text-align: center;
+}
+
+dialog {
+  border: none;
+  border-radius: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+dialog h2 {
+  margin-bottom: 1rem;
+}
+dialog p {
+  margin-bottom: 1rem;
+}
+
+dialog button {
+  display: block;
+  margin: auto;
+  padding: 0.5rem 1rem;
 }

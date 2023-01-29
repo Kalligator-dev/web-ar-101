@@ -1,0 +1,59 @@
+main {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#control {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 99;
+  transition: all 0.6s cubic-bezier(0.175, 0.785, 0.32, 1.275);
+}
+#control:has(.cam) {
+  bottom: 4rem;
+}
+
+button {
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  transition: all 0.2 ease-in-out;
+}
+button.cam {
+  background-color: rgb(156, 156, 156);
+}
+button.cam:hover {
+  background-color: rgb(206, 206, 206);
+}
+
+.btn-anim {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.15;
+  border: 2px gray solid;
+  transform: scale(0.9);
+  background-color: rgb(157, 157, 157);
+  z-index: -1;
+}
+.btn-anim.anime {
+  animation: anime 0.5s ease-in-out alternate forwards infinite;
+}
+
+@keyframes anime {
+  from {
+    transform: scale();
+  }
+  to {
+    transform: scale(1.3);
+  }
+}

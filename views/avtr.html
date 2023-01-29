@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script type="module" src="../assets/js/avtr.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>WebAr 101</h1>
+      <div id="links">
+        <a href="../index.html">Azeria</a>
+        <a href="avtr.html" class="active">AVTR</a>
+        <a href="vid.html">VID</a>
+        <a href="world.html">World</a>
+      </div>
+    </header>
+    <div id="control">
+      <button id="startButton" class="deact">Start</button>
+      <button id="stopButton" class="deact">Stop</button>
+    </div>
+    <div id="container" class="deact">
+      <div id="video"></div>
+    </div>
+    <footer>
+      <p>©2023 kalligator-dev, made using mind-ar</p>
+    </footer>
+    <dialog open>
+      <h2>Permission Needed</h2>
+      <p>
+        This is an AR application. It requires user permission to access camera.
+        Grant permission?
+      </p>
+      <button id="accessButton">OK</button>
+    </dialog>
+  </body>
+</html>
